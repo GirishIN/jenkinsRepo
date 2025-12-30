@@ -14,17 +14,7 @@ pipeline {
         stage('Deploy HTML') {
             steps {
                 sh '''
-                sudo cp index.html /var/www/html/
-                sudo chown www-data:www-data /var/www/html/index.html
-                sudo chmod 644 /var/www/html/index.html
-                '''
-            }
-        }
-
-        stage('Restart Apache') {
-            steps {
-                sh '''
-                sudo systemctl restart apache2
+                cp index.html /var/www/html/
                 '''
             }
         }
