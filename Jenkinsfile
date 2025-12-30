@@ -14,7 +14,7 @@ pipeline {
         stage('Deploy HTML') {
             steps {
                 sh '''
-                sudo cp index.html /var/www/html/index.html
+                sudo cp index.html /var/www/html/
                 sudo chown www-data:www-data /var/www/html/index.html
                 sudo chmod 644 /var/www/html/index.html
                 '''
